@@ -1,0 +1,114 @@
+body{
+    background-color: #EDEFEE;
+    font-family: 'Markazi text',serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+header > img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto ;
+
+}
+nav ul{
+    background-color: #333;
+    color: white;
+    list-style: none;
+    font-size: x-large;
+    padding: 0.5em;
+    border-radius: 20px;
+    text-align: center;
+    margin: 1%;
+}
+nav li{
+        display: inline-block;
+        padding: 0 1rem;
+        color: white;
+}
+.hero {
+    background-image: url('pasta.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 20px;
+}
+section{
+    display: flex;
+}
+article{
+    flex: 1;
+    margin: 5px;
+}
+article > h1{
+    background-image: url("Asset\ 16@4x.png") ;
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    padding-left: 0;
+}
+table{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer div{
+    flex: 1;
+}
+footer {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.footer-logo img {
+    height: 30px;
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+}
