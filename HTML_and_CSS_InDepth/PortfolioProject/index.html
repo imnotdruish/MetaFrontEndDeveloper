@@ -4,24 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lucky Shrub</title>
-  <link rel="stylesheet" href="_styles/style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="_images/Asset3.png" alt="Lucky Shrub Logo">
+  <header id="home">
+    <div class="company__banner">
+      <div class="company__logo">
+        <img src="_images/logo_no_text.png" alt="Lucky Shrub Logo">
+      </div>
+      <div class="company__name">
+        <h1>Lucky<br>Shrubs</h1>
+      </div>
     </div>
     <div class="nav__bar">
       <nav class="main__nav">
         <ul>
-          <li><a href="index.html" target="_self" selected>Home</a></li>
-          <li><a href="_pages/about.html" target="_self">About</a></li>
-          <li><a href="_pages/services.html" target="_self">Services</a></li>
-          <li><a href="_pages/contact.html" target="_self">Contact</a></li>
+          <li><a href="#home" target="_self">Home</a></li>
+          <li><a href="#about" target="_self">About</a></li>
+          <li><a href="#services" target="_self">Services</a></li>
+          <li><a href="#contact" target="_self">Request Consultation</a></li>
         </ul>
       </nav>
     </div>
@@ -30,23 +35,85 @@
     <div class="hero">
       <div class="hero__banner">
         <div class="hero__text">
-          <h1>Lucky Shrub</h1>
-          <p>The sun is shining and the flowers are in bloom!</p>
-        </div>
-        <div class="hero__img">
-          <img src="_images/logo_no_text.png" alt="Lucky Shrub Logo">
+          <p>Summer Sale!! 25% off all Flowers and Plants!!</p>
         </div>
       </div>
     </div>
+    <div id="services" class="services">
+      <article class="landscape">
+        <div class="article__title">
+          <img src="_images/logo_no_text_red.png" alt="Lucky Shrub Logo in Red">
+          <h2>Landscape</h2>
+        </div>
+        <div class="article__info">
+          <p>
+            Elevate your outdoor space with our expert landscaping service, crafting tailored designs that harmonize beauty, functionality, and sustainability.
+          </p>
+        </div>
+      </article>
+      <article class="nursery">
+        <div class="article__title">
+          <img src="_images/logo_no_text_green.png" alt="Lucky Shrub Logo in Green">
+          <h2>Nursery</h2>
+        </div>
+        <div class="article__info">
+          <p>
+            At Lucky Shrub, we offer a diverse selection of premium plants and expert advice to help you create the garden of your dreams.
+          </p>
+        </div>
+      </article>
+      <article class="maintenance">
+        <div class="article__title">
+          <img src="_images/logo_no_text_black.png" alt="Lucky Shrub Logo in Black">
+          <h2>Maintenance</h2>
+        </div>
+        <div class="article__info">
+          <p>
+            Transform your lawn into a lush, vibrant oasis with our professional lawn care services, tailored to nurture healthy, green grass year-round.
+          </p>
+        </div> 
+      </article>
+    </div>
+    <div class="cta">
+      <aside id="about" class="about">
+        <div class="about__title">
+          <h2>A bit of history</h2>
+        </div>
+        <div class="about__info">
+          <p>
+            Lucky Shrub was started by a husband and wife team, Jason and Maria, who share a long-time love for plants. Jason is the garden architect. He creates and oversees all designs while managing his team of landscapers. Maria manages all the marketing for the company and oversees the nursery.
+          </p>
+        </div>
+      </aside>
+      <section id="contact" class="contact">
+        <div class="contact__form">
+          <h2>Request a consultation</h2>
+          <form action="/index.html" method="GET">
+            <div class="name">
+              <label for="full_name">Name</label>
+              <input type="text" id="full_name" name="full_name">
+            </div>
+            <div class="email__address">
+              <label for="email" required>Email <span>*</span></label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="phone">
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone">
+            </div>
+            <div class="options">
+              <input type="radio" name="landscape" id="landscape" value="landscape"><label for="landscape">Landscape</label>
+              <input type="radio" name="lawn_care" id="lawn_care" value="lawn_care"><label for="lawn_care">Lawn Care</label>
+            </div>
+            <button type="submit">Submit Request</button>
+          </form>
+        </div>
+      </section>
+    </div>
   </main>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <footer>
-    <div class="footer__logo">
-      <img src="_images/logo_no_text.png" alt="Lucky Shrub Logo">
-    </div> 
     <div class="social__links">
-      <div class="social__links__title">
-        <h3>Follow Us</h3>
-      </div>
       <div class="social__links__icons">
         <ul>
           <li>
@@ -62,8 +129,9 @@
       </div>
     </div>
     <div class="copyright">
-      <p>&copy; 2024 Lucky Shrubs</p>
+      <p>&copy; 2024 Lucky Shrub</p>
     </div>
   </footer>
+<script src="_scripts/toTop.js"></script>
 </body>
 </html>
