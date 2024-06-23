@@ -9,28 +9,43 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
-const socials = [
-  {
-    icon: faEnvelope,
-    url: "mailto: hello@example.com",
-  },
-  {
-    icon: faGithub,
-    url: "https://github.com",
-  },
-  {
-    icon: faLinkedin,
-    url: "https://www.linkedin.com",
-  },
-  {
-    icon: faMedium,
-    url: "https://medium.com",
-  },
-  {
-    icon: faStackOverflow,
-    url: "https://stackoverflow.com",
-  },
-];
+function SocialsList() {
+
+  const socials = [
+    {
+      icon: faEnvelope,
+      name: "Envelope Icon",
+      url: "mailto: hello@example.com",
+    },
+    {
+      icon: faGithub,
+      name: "Github Logo",
+      url: "https://github.com",
+    },
+    {
+      icon: faLinkedin,
+      name: "Linkedin Logo",
+      url: "https://www.linkedin.com",
+    },
+    {
+      icon: faMedium,
+      name: "Medium Logo",
+      url: "https://medium.com",
+    },
+    {
+      icon: faStackOverflow,
+      name: "StackOverflow Logo",
+      url: "https://stackoverflow.com",
+    },
+  ];
+
+  const listSocials = socials.map((social) => {
+    return (
+        <a href={social.url} alt={social.name}><FontAwesomeIcon icon={social.icon} /></a>
+    )
+  });
+  return <HStack spacing={4}>{listSocials}</HStack>;
+}
 
 const Header = () => {
   const handleClick = (anchor) => () => {
@@ -44,8 +59,8 @@ const Header = () => {
     }
   };
 
-  return (
-    <Box
+    return (
+      <Box
       position="fixed"
       top={0}
       left={0}
@@ -64,7 +79,7 @@ const Header = () => {
           alignItems="center"
         >
           <nav>
-            {/* Add social media links based on the `socials` data */}
+            <SocialsList />
           </nav>
           <nav>
             <HStack spacing={8}>
@@ -74,6 +89,6 @@ const Header = () => {
         </HStack>
       </Box>
     </Box>
-  );
+    );
 };
 export default Header;
