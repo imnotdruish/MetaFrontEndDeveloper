@@ -41,10 +41,35 @@ function SocialsList() {
 
   const listSocials = socials.map((social) => {
     return (
-        <a href={social.url} alt={social.name}><FontAwesomeIcon icon={social.icon} /></a>
+        <a href={social.url} alt={social.name}><FontAwesomeIcon icon={social.icon} size="2x" /></a>
     )
   });
   return <HStack spacing={4}>{listSocials}</HStack>;
+}
+
+function PageList() {
+
+  const links = [
+    {
+      name: "Projects",
+      alt: "Projects Section",
+      anchor: "project",
+      url: "#projects-section",
+    },
+    {
+      name: "Contact Me",
+      alt: "Contact Section",
+      anchor: "contactme",
+      url: "#contactme-section",
+    },
+  ];
+
+  const listPages = links.map((link) => {
+    return (
+        <a href={link.url} alt={link.alt}>{link.name}</a>
+    )
+  });
+  return <HStack spacing={4}>{listPages}</HStack>;
 }
 
 const Header = () => {
@@ -83,7 +108,7 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              {/* Add links to Projects and Contact me section */}
+              <PageList />
             </HStack>
           </nav>
         </HStack>
