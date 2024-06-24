@@ -9,68 +9,33 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
-function SocialsList() {
-
   const socials = [
     {
       icon: faEnvelope,
-      name: "Envelope Icon",
+      alt: "Envelope Icon",
       url: "mailto: hello@example.com",
     },
     {
       icon: faGithub,
-      name: "Github Logo",
+      alt: "Github Logo",
       url: "https://github.com",
     },
     {
       icon: faLinkedin,
-      name: "Linkedin Logo",
+      alt: "Linkedin Logo",
       url: "https://www.linkedin.com",
     },
     {
       icon: faMedium,
-      name: "Medium Logo",
+      alt: "Medium Logo",
       url: "https://medium.com",
     },
     {
       icon: faStackOverflow,
-      name: "StackOverflow Logo",
+      alt: "StackOverflow Logo",
       url: "https://stackoverflow.com",
     },
   ];
-
-  const listSocials = socials.map((social) => {
-    return (
-        <a href={social.url} alt={social.name}><FontAwesomeIcon icon={social.icon} size="2x" /></a>
-    )
-  });
-  return <HStack spacing={4}>{listSocials}</HStack>;
-}
-
-function PageList() {
-
-  const links = [
-    {
-      name: "Projects",
-      alt: "Projects Section",
-      anchor: "project",
-      url: "#projects-section",
-    },
-    {
-      name: "Contact Me",
-      alt: "Contact Section",
-      anchor: "contactme",
-      url: "#contactme-section",
-    },
-  ];
-
-  const listPages = links.map((link) => {
-    return (
-        <a href={link.url} alt={link.alt}>{link.name}</a>
-    )
-  });
-  return <HStack spacing={4}>{listPages}</HStack>;
-}
 
 const Header = () => {
   const handleClick = (anchor) => () => {
@@ -84,18 +49,48 @@ const Header = () => {
     }
   };
 
+  const headRef = useRef(null);
+
+  useEffect(() => {
+    let prevPos = window.scrollY;
+
+    const handleScroll = () => {
+      const currPos = window.scrollY;
+      const currElement = headRef.current;
+
+      if (!currElement) {
+        return;
+      }
+
+      if (prevPos > currPos) {
+        currElement.style.transform = "translateY(0)";
+      } else {
+        currElement.style.transform = "translateY(-200px)";
+      }
+
+      prevPos = currPos;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
     return (
       <Box
-      position="fixed"
-      top={0}
-      left={0}
-      right={0}
-      translateY={0}
-      transitionProperty="transform"
-      transitionDuration=".3s"
-      transitionTimingFunction="ease-in-out"
-      backgroundColor="#18181b"
-    >
+        position="fixed"
+        top={0}
+        left={0}
+        right={0}
+        translateY={0}
+        transitionProperty="transform"
+        transitionDuration=".3s"
+        transitionTimingFunction="ease-in-out"
+        backgroundColor="#18181b"
+        ref={headRef}
+      >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
           px={16}
@@ -104,11 +99,20 @@ const Header = () => {
           alignItems="center"
         >
           <nav>
-            <SocialsList />
+            <HStack spacing={4}>
+            {/* Add social media links based on the 'socials' date */}
+              {socials.map(({icon, alt, url}) => (
+                <a key={url} href={url} icon={icon} alt={alt} target="_blank">
+                  <FontAwesomeIcon key={url} icon={icon} size="2x" />
+                </a>
+              ))}
+              </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
-              <PageList />
+              {/* Add links to Projects and Contact me section */}
+              <a href="/#projects-section" onClick={handleClick}>Projects</a>
+              <a href="/#contactme-section" onClick={handleClick}>Contact Me</a>
             </HStack>
           </nav>
         </HStack>
