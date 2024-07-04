@@ -1,0 +1,17 @@
+.nav__bar {
+  display: flex;
+  
+  ul {
+    display: flex;
+    gap: clamp(0.25rem, 2vw, 5rem);
+  }
+
+  ul li {
+    list-style: none;
+  
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
