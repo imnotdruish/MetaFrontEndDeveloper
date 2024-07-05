@@ -2,6 +2,12 @@ import React from 'react'
 import Nav from '../Nav/Nav'
 import Logo from './Logo_vertical.png';
 import styles from './Footer.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@awesome.me/kit-1c29263bf3/icons/classic/brands';
+import { faFacebook } from '@awesome.me/kit-1c29263bf3/icons/classic/brands';
+import { faThreads } from '@awesome.me/kit-1c29263bf3/icons/classic/brands';
+import { faXTwitter } from '@awesome.me/kit-1c29263bf3/icons/classic/brands';
+import { faTiktok } from '@awesome.me/kit-1c29263bf3/icons/classic/brands';
 
 function Footer() {
   return (
@@ -23,31 +29,31 @@ function Footer() {
         <ul>
           <li>
             <a href="https://instagram.com" alt="Instagram">
-              <i class="fa-brands fa-instagram"></i> 
+              <FontAwesomeIcon icon={faInstagram} /> 
               Instagram
             </a>
           </li>
           <li>
             <a href="https://facebook.com" alt="Facebook">
-              <i class="fa-brands fa-facebook"></i> 
+              <FontAwesomeIcon icon={faFacebook} /> 
               Facebook
             </a>
           </li>
           <li>
             <a href="https://threads.com" alt="Threads">
-            <i class="fa-brands fa-threads"></i>
+            <FontAwesomeIcon icon={faThreads} />
               Threads
             </a>
           </li>
           <li>
             <a href="https://x.com" alt="Twitter">
-              <i class="fa-brands fa-x-twitter"></i>
+              <FontAwesomeIcon icon={faXTwitter} />
               X
             </a>
           </li>
           <li>
             <a href="https://tiktok.com" alt="TikTok">
-              <i class="fa-brands fa-tiktok"></i>
+              <FontAwesomeIcon icon={faTiktok} />
               Tiktok
             </a>
           </li>

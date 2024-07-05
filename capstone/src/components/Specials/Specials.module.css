@@ -1,0 +1,27 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.special__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 5rem;
+}
+
+.orderBtn {
+  background-color: #F4CE15;
+  font-weight: bold;
+  color: #000000;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 16px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
