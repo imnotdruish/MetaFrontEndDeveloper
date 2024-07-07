@@ -1,0 +1,14 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+}
+
+.testimonial__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

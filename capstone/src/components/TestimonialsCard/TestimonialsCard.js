@@ -1,13 +1,23 @@
-import React from 'react'
+import React from 'react';
+import styles from './TestimonialsCard.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@awesome.me/kit-1c29263bf3/icons/classic/solid';
+import { faStar } from '@awesome.me/kit-1c29263bf3/icons/classic/solid';
 
-function TestimonialsCard() {
+const TestimonialsCard = ({rating, name, quote}) =>  {
   return (
     <>
-      <div>
-        <h2>Rating</h2>
-        <img src="http://placehold.it/" />
-        <p className="Name">Name</p>
-        <p className="quote">Something for Later</p>
+      <div className={styles.testimonial__card}>
+        <div className={styles.testimonial__card__rating}>
+          <h2>Rating {rating} of 5 <FontAwesomeIcon icon={faStar} /></h2>
+        </div>
+        <div className={styles.testimonial__card__user}>
+          <FontAwesomeIcon icon={faUser} className={styles.testimonial__card__user__icon} />
+          <p className="Name">{name}</p>
+        </div>
+        <div className={styles.testimonial__card__quote}>
+          <p className="quote">{quote}</p>
+        </div>
       </div>
     </>
   )
