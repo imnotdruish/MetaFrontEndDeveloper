@@ -1,20 +1,29 @@
-import React from 'react'
+import React from 'react';
+import Image1 from './Mario and Adrian A.jpg';
+import Image2 from './Mario and Adrian b.jpg';
+import styles from './About.module.css';
 
 function About() {
   return (
     <>
-      <div className="about__text">
-        <h1 className="about__title">Little Lemon</h1>
-        <h2 className="about__location">Chicago</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio corrupti velit magni qui deleniti saepe error?
-          Autem excepturi explicabo similique laudantium maxime, accusantium cupiditate! Autem perferendis vitae provident temporibus nesciunt!
-        </p>
-      </div>
-      <div className="about__images">
-        <img src="http://placehold.it/" alt="Image 1" />
-        <img src="http://placehold.it/" alt="Image 2" />
-      </div>
+      <section className={styles.about__container}>
+        <div className={styles.about__text}>
+          <h1 className={styles.about__title}>Little Lemon</h1>
+          <h2 className={styles.about__location}>Chicago</h2>
+          <p className={styles.about__description}>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio corrupti velit magni qui deleniti saepe error?
+            Autem excepturi explicabo similique laudantium maxime, accusantium cupiditate! Autem perferendis vitae provident temporibus nesciunt!
+          </p>
+        </div>
+        <div className={styles.about__images}>
+          <div className={styles.about__image__one}>
+            <img src={Image1} alt="Mario and Adrian in the kitchen" />
+          </div>
+          <div className={styles.about__image__two}>
+            <img src={Image2} alt="Mario and Adrian in the kitchen laughing" />
+          </div>
+        </div>
+      </section>
     </>
   )
 }

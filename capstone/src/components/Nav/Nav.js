@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './Nav.module.css';
+import hamburger from './🦆 icon _hamburger menu_.svg';
 
 function Nav() {
   return (
     <>
-      <nav className={styles.nav__bar}>
+      <img src={hamburger} alt="nav menu" className={styles.mobile__nav} />
+      <nav className={styles.nav__bar + ' ' + styles.desktop__nav}>
         <ul>
           <li><a className="App-link" href="#Home" alt="Home">Home</a></li>
           <li><a className="App-link" href="#About" alt="About">About</a></li>

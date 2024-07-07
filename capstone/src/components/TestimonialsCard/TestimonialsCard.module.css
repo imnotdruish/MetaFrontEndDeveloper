@@ -24,11 +24,12 @@
 .testimonial__card__user__icon {
   background-color: black;
   border-radius: 100%;
-  padding: .5rem;
-  font-size: 2rem;
+  padding: .375rem .5rem;
+  font-size: 1.5rem;
   color: #EDEFEE;
 }
 
 .testimonial__card__quote {
   max-width: 300px;
+  font-size: .875rem;
 }

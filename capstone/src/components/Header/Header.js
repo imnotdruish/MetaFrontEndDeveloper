@@ -7,7 +7,7 @@ function Header() {
   return (
     <>
       <div className={styles.header}>
-        <img className="App-logo" src={Logo} alt="Little Lemon Logo" />
+        <img className={styles.header__img} src={Logo} alt="Little Lemon Logo" />
         <Nav />
       </div>
     </>
