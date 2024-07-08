@@ -1,16 +1,17 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 .header__img {
   width: 150px;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 785px) {
+
   .header {
     padding: 2rem 5rem;
+    justify-content: space-between;    
   }
 }

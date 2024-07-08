@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../Nav/Nav'
+import FooterNav from '../FooterNav/FooterNav'
 import Logo from './Logo_vertical.png';
 import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,52 +13,53 @@ function Footer() {
   return (
     <>
       <footer>
-        <div className="footer__logo">
+        <div className={styles.footer__logo}>
           <img className={styles.footer__img} src={Logo} alt="Logo for Little Lemon" />
         </div>
-        <div className="footer__nav">
-          <Nav />
+        <div className={styles.footer__nav}>
+          <h2>Navigation</h2>
+          <FooterNav />
         </div>
-        <div className="footer__location">
-          <ul>
-            <li><a href="#Address" alt="Location">Address</a></li>
-            <li><a href="#Phone" alt="Phone Number">Phone Number</a></li>
-            <li><a href="mailto:email@mail.com" alt="Email">Email</a></li>
-          </ul>
+        <div className={styles.footer__location}>
+          <h2>Contact</h2>
+          <a href="#Address" alt="Location">Address</a>
+          <a href="#Phone" alt="Phone Number">Phone Number</a>
+          <a href="mailto:email@mail.com" alt="Email">Email</a>
         </div>
-        <div className="footer__socials">
-          <ul>
-            <li>
-              <a href="https://instagram.com" alt="Instagram">
-                <FontAwesomeIcon icon={faInstagram} /> 
+        <div className={styles.footer__socials}>
+          <h2>Socials</h2>
+          <div className={styles.footer__socials__links}>
+            <a href="https://instagram.com" alt="Instagram">
+              <FontAwesomeIcon icon={faInstagram} /> 
+              <span>
                 Instagram
-              </a>
-            </li>
-            <li>
-              <a href="https://facebook.com" alt="Facebook">
-                <FontAwesomeIcon icon={faFacebook} /> 
+              </span>
+            </a>
+            <a href="https://facebook.com" alt="Facebook">
+              <FontAwesomeIcon icon={faFacebook} /> 
+              <span>
                 Facebook
-              </a>
-            </li>
-            <li>
-              <a href="https://threads.com" alt="Threads">
+              </span>
+            </a>
+            <a href="https://threads.com" alt="Threads">
               <FontAwesomeIcon icon={faThreads} />
+              <span>
                 Threads
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com" alt="Twitter">
-                <FontAwesomeIcon icon={faXTwitter} />
-                X
-              </a>
-            </li>
-            <li>
-              <a href="https://tiktok.com" alt="TikTok">
-                <FontAwesomeIcon icon={faTiktok} />
+              </span>
+            </a>
+            <a href="https://x.com" alt="Twitter">
+              <FontAwesomeIcon icon={faXTwitter} />
+              <span>
+                X (Formally Twitter)
+              </span>
+            </a>
+            <a href="https://tiktok.com" alt="TikTok">
+              <FontAwesomeIcon icon={faTiktok} />
+              <span>
                 Tiktok
-              </a>
-            </li>
-          </ul>
+              </span>
+            </a>
+          </div>
         </div>
       </footer>
     </>

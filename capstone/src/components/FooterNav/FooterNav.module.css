@@ -1,0 +1,13 @@
+ul li {
+  list-style: none;
+}
+
+.footernav__bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.footernav__bar a {
+  text-decoration: none;
+  color: inherit;
+}

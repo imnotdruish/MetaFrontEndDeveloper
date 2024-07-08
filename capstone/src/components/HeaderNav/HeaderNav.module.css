@@ -1,0 +1,97 @@
+/* ---- Navbar and Burger Menu ---- */
+nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.burger__menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #495E57;
+}
+
+.menu {
+  width: 100%;
+  height: 100vh;
+  background-color: #EE9972;
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  padding: 2rem 0;
+}
+
+/* ---- sliding menu ---- */
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.header__nav__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+  }
+  
+  a:hover,
+  a:focus-visible {
+    color: #EE9972;
+  }
+}
+
+@media(min-width: 785px) {
+  nav {
+    position: unset;
+    width: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu {
+    width: unset;
+    height: unset;
+    background-color: white;
+    position: unset;
+    padding: 0;
+  }
+
+  .header__nav__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1rem;
+    }
+    
+    a:hover,
+    a:focus-visible {
+      color: #EE9972;
+    }
+  }
+
+  .hidden {
+    opacity: 1;
+  }
+
+  .burger__menu {
+    display: none;
+  }
+}
