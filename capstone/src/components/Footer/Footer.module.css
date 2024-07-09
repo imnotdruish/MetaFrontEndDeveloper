@@ -2,9 +2,10 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: row;
-  padding: 5rem 5rem 5rem 7rem;
-  text-align: left;
-  justify-content: space-around;
+  padding: 5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -20,10 +21,11 @@ a:focus-visible {
 
 footer h2 {
   font-size: 2rem;
+  text-align: center;
 }
 
 .footer__logo {
-  align-self: stretch;
+  align-self: center;
 }
 
 .footer__img {
@@ -36,7 +38,7 @@ footer h2 {
 .footer__socials {
   display: flex;
   flex-direction: column;
-  align-self: stretch;
+  align-self: center;
   line-height: 2rem;
 }
 
@@ -54,20 +56,28 @@ footer h2 {
 
   footer {
     flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
   }
 
   footer h2 {
     font-size: 1.5rem;
+    text-align: left;
   }
 
   a {
     font-size: 1rem;
   }
 
+  .footer__logo {
+    align-self: stretch;
+  }
+
   .footer__nav,
   .footer__location,
   .footer__socials {
     line-height: 1.5rem;
+    align-self: stretch;
   }
 
   .footer__socials__links {

@@ -11,3 +11,9 @@ ul li {
   text-decoration: none;
   color: inherit;
 }
+
+@media(min-width: 775px) {
+  .footernav__bar a {
+    text-align: left;
+  }
+}

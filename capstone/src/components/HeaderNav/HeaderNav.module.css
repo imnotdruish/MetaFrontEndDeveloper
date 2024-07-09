@@ -1,5 +1,5 @@
 /* ---- Navbar and Burger Menu ---- */
-nav {
+.header__nav {
   position: relative;
   width: 100%;
   display: flex;
@@ -53,7 +53,7 @@ nav {
 }
 
 @media(min-width: 785px) {
-  nav {
+  .header__nav {
     position: unset;
     width: unset;
     display: flex;

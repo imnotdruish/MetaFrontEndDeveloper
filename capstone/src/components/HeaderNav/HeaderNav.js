@@ -13,7 +13,7 @@ function HeaderNav() {
 
   return (
     <>
-      <nav>
+      <nav className={styles.header__nav}>
         <div className={styles.burger__menu}>
           <FontAwesomeIcon 
             icon={menuIcon}
