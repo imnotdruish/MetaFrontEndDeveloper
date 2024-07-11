@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@awesome.me/kit-1c29263bf3/icons/classic/solid';
 import { faX } from '@awesome.me/kit-1c29263bf3/icons/classic/solid';
 import { useMenu } from '../../common/MenuContext';
+import { NavLink } from 'react-router-dom';
 
 function HeaderNav() {
 
@@ -27,9 +28,30 @@ function HeaderNav() {
           <div className={styles.header__nav__links}>
             <a className={styles.header__nav__link} href="#Home" alt="Home">Home</a>
             <a className={styles.header__nav__link} href="#About" alt="About">About</a>
-            <a className={styles.header__nav__link} href="#Menu" alt="Menu">Menu</a>
-            <a className={styles.header__nav__link} href="#Reservations" alt="Reservations">Reservations</a>
-            <a className={styles.header__nav__link} href="#Order" alt="Order Online">Order Online</a>
+            <NavLink 
+              className={styles.header__nav__link} 
+              to="/menu"
+              style={({ isActive }) => ({ color: isActive ? "#495E57" : "black"
+              })} 
+            >
+            Menu
+            </NavLink>
+            <NavLink
+              className={styles.header__nav__link} 
+              to="/reservation"
+              style={({ isActive }) => ({ color: isActive ? "#495E57" : "black"
+              })}  
+              >
+              Reservations
+            </NavLink>
+            <NavLink 
+              className={styles.header__nav__link} 
+              to="/order"
+              style={({ isActive }) => ({ color: isActive ? "#495E57" : "black"
+              })} 
+              >
+              Order Online
+            </NavLink>
             <a className={styles.header__nav__link} href="#Login" alt="Login">Login</a>
           </div>
         </div>

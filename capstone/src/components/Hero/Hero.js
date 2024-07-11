@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 function Hero() {
   return (
     <>
-      <div className={styles.hero__container}>
+      <div id="Home" className={styles.hero__container}>
         <div className={styles.hero__background}>
           <div className={styles.hero__text}>
             <h1 className={styles.hero__title}>Little Lemon</h1>
