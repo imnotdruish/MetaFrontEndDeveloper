@@ -1,17 +1,19 @@
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Main from './components/Main';
+import About from './components/About/About';
 import Menu from './components/Menu/Menu';
 import Reservation from './components/Reservation/Reservation';
 import Order from './components/Order/Order';
+import Login from './components/Login/Login';
 import { MenuProvider } from './common/MenuContext';
-import { Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <MenuProvider>
           <Header />
         </MenuProvider>
@@ -23,8 +25,18 @@ function App() {
           />
           <Route
             exact
+            path="/about"
+            element={<About />}
+          />
+          <Route
+            exact
             path="/menu"
             element={<Menu />}
+          />
+          <Route
+            exact
+            path="/reservation"
+            element={<Reservation />}
           />
           <Route
             exact
@@ -33,12 +45,12 @@ function App() {
           />
           <Route
             exact
-            path="/reservation"
-            element={<Reservation />}
+            path="/login"
+            element={<Login />}
           />
         </Routes>
         <Footer />
-      </Router>
+      </BrowserRouter>
     </>
   );
 }

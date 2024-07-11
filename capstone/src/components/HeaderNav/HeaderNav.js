@@ -26,33 +26,90 @@ function HeaderNav() {
       <div className={`${menu === 'hidden' ? styles.hidden : styles.visible}`}>
         <div className={styles.menu}>
           <div className={styles.header__nav__links}>
-            <a className={styles.header__nav__link} href="#Home" alt="Home">Home</a>
-            <a className={styles.header__nav__link} href="#About" alt="About">About</a>
+            <NavLink
+              className={styles.header__nav__link}
+              to="/"
+              style={({ isActive }) => {
+                return { 
+                  color: isActive ? "#495E57" : "black",
+                  fontWeight: isActive ? "bold" : "",
+                  textDecoration: isActive ? "underline" : "",
+                }
+              }}
+              onClick={toggleMenu}
+            >
+              Home
+            </NavLink>
+            <NavLink 
+              className={styles.header__nav__link} 
+              to="/about"
+              style={({ isActive }) => {
+                return { 
+                  color: isActive ? "#495E57" : "black",
+                  fontWeight: isActive ? "bold" : "",
+                  textDecoration: isActive ? "underline" : "",
+                }
+              }}
+              onClick={toggleMenu}
+            >
+              About
+            </NavLink>
             <NavLink 
               className={styles.header__nav__link} 
               to="/menu"
-              style={({ isActive }) => ({ color: isActive ? "#495E57" : "black"
-              })} 
+              style={({ isActive }) => {
+                return { 
+                  color: isActive ? "#495E57" : "black",
+                  fontWeight: isActive ? "bold" : "",
+                  textDecoration: isActive ? "underline" : "",
+                }
+              }}
+              onClick={toggleMenu}
             >
             Menu
             </NavLink>
             <NavLink
               className={styles.header__nav__link} 
               to="/reservation"
-              style={({ isActive }) => ({ color: isActive ? "#495E57" : "black"
-              })}  
+              style={({ isActive }) => {
+                return { 
+                  color: isActive ? "#495E57" : "black",
+                  fontWeight: isActive ? "bold" : "",
+                  textDecoration: isActive ? "underline" : "",
+                }
+              }}
+              onClick={toggleMenu}
               >
               Reservations
             </NavLink>
             <NavLink 
               className={styles.header__nav__link} 
               to="/order"
-              style={({ isActive }) => ({ color: isActive ? "#495E57" : "black"
-              })} 
+              style={({ isActive }) => {
+                return { 
+                  color: isActive ? "#495E57" : "black",
+                  fontWeight: isActive ? "bold" : "",
+                  textDecoration: isActive ? "underline" : "",
+                }
+              }}
+              onClick={toggleMenu}
               >
               Order Online
             </NavLink>
-            <a className={styles.header__nav__link} href="#Login" alt="Login">Login</a>
+            <NavLink
+              className={styles.header__nav__link}
+              to="/login"
+              style={({ isActive }) => {
+                return { 
+                  color: isActive ? "#495E57" : "black",
+                  fontWeight: isActive ? "bold" : "",
+                  textDecoration: isActive ? "underline" : "",
+                }
+              }}
+              onClick={toggleMenu}
+            >
+              Login
+            </NavLink>
           </div>
         </div>
       </div>

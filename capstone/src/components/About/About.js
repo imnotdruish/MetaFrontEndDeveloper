@@ -11,16 +11,18 @@ function About() {
           <h1 className={styles.about__title}>Little Lemon</h1>
           <h2 className={styles.about__location}>Chicago</h2>
           <p className={styles.about__description}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio corrupti velit magni qui deleniti saepe error?
-            Autem excepturi explicabo similique laudantium maxime, accusantium cupiditate! Autem perferendis vitae provident temporibus nesciunt!
+            Welcome to Little Lemon Chicago! We are a friendly family-owned Mediterranean restaurant, where we bring you traditional recipes with a modern twist. Indulge in our flavorful Bruschetta, crisp Greek Salad, and perfectly paired wines. Our goal is to create a warm and inviting atmosphere for everyone to enjoy. 
+          </p>
+          <p className={styles.about__description}>
+            Whether you're a food enthusiast or simply looking for a delicious meal, our menu has something for you.Join us for a culinary experience that will tantalize your taste buds and leave you coming back for more. Come visit us and be a part of the Little Lemon Chicago family today.
           </p>
         </div>
         <div className={styles.about__images}>
           <div className={styles.about__image__one}>
-            <img src={Image1} alt="Mario and Adrian in the kitchen" />
+            <img className={styles.fade_in} src={Image1} alt="Mario and Adrian in the kitchen" />
           </div>
           <div className={styles.about__image__two}>
-            <img src={Image2} alt="Mario and Adrian in the kitchen laughing" />
+            <img className={styles.fade_in} src={Image2} alt="Mario and Adrian in the kitchen laughing" />
           </div>
         </div>
       </section>

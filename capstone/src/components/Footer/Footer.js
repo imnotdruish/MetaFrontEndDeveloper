@@ -22,9 +22,24 @@ function Footer() {
         </div>
         <div className={styles.footer__location}>
           <h2>Contact</h2>
-          <a href="#Address" alt="Location">Address</a>
-          <a href="#Phone" alt="Phone Number">Phone Number</a>
-          <a href="mailto:email@mail.com" alt="Email">Email</a>
+          <a 
+            href="#Address" 
+            alt="Location"
+          >
+            123 Main St. <br /> Chicago, IL 60690
+          </a>
+          <a 
+            href="tel:312-555-5555"
+            alt="Phone Number for Little Lemon"
+          >
+            312-555-5555
+          </a>
+          <a 
+            href="mailto:contact@littlelemon.com" 
+            alt="Email"
+          >
+            contact@littlelemon.com
+          </a>
         </div>
         <div className={styles.footer__socials}>
           <h2>Socials</h2>
