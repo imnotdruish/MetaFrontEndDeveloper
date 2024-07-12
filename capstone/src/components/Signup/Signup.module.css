@@ -1,4 +1,4 @@
-.login__section {
+.signup__section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,22 +65,22 @@ input {
   opacity: 0.8;
 }
 
-.login__img {
+.signup__img {
   max-width: 200px;
   margin: 1rem;
 }
 
-.signup {
+.login {
   color: #495E57;
   text-align: center;
 }
 
-.signup__link {
+.login__link {
   font-size: 1rem;
   cursor: pointer;
 }
 
-.signup__link:hover,
-.signup__link:focus-visible {
+.login__link:hover,
+.login__link:focus-visible {
   text-decoration: underline;
 }

@@ -6,6 +6,7 @@ import Menu from './components/Menu/Menu';
 import Reservation from './components/Reservation/Reservation';
 import Order from './components/Order/Order';
 import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
 import { MenuProvider } from './common/MenuContext';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -47,6 +48,11 @@ function App() {
             exact
             path="/login"
             element={<Login />}
+          />
+          <Route
+            exact
+            path="/signup"
+            element={<Signup />}
           />
         </Routes>
         <Footer />

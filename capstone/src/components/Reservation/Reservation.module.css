@@ -1,0 +1,41 @@
+.reservation__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #495E57;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.reservation__form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 0 5px black;
+  border-radius: 1rem;
+  padding: 2rem 5rem;
+}
+
+select {
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.reservation__btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  background-color: #F4CE14;
+  box-shadow: 0 1px 5px black;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.reservation__btn:hover,
+.reservation__btn:focus-visible {
+  opacity: 0.8;
+}
