@@ -1,28 +1,6 @@
 import React from 'react'
 import styles from './Reservation.module.css';
 
-let inputEle = document.getElementById('time');
-
-function onTimeChange() { 
-  let timeSplit = inputEle.value.split(':'),
-    hours,
-    minutes,
-    meridian;
-    hours = timeSplit[0];
-    minutes = timeSplit[1];
-    if (hours > 12) {
-      meridian = 'PM';
-      hours -= 12;
-    } else if (hours < 12 ) {
-      meridian = 'AM';
-      if (hours == 0) {
-        hours = 12;
-      }
-    } else {
-      meridian = 'PM';
-    }
-}
-
 function Reservation() {
   return (
     <>
@@ -59,7 +37,7 @@ function Reservation() {
             <label for="date">Date</label>
             <input type="date" id="date" name="date" min="2024-07-01" max="2024-08-31" />
             <label for="time">Time</label>
-            <input type="time" id="time" name="time" min="16:00" onChange={onTimeChange()} />
+            <input type="time" id="time" name="time" min="16:00" />
             <small>Reservation Hours are 4:00pm to 9:00pm</small>
             <label for="name">Name for Reservation</label>
             <input name="name" id="name" type="text" />
