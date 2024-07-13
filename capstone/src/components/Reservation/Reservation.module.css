@@ -12,10 +12,45 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   background-color: white;
   box-shadow: 0 0 5px black;
   border-radius: 1rem;
   padding: 2rem 5rem;
+}
+
+.reservation__persons {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.reservation__date__time {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.reservation__visitors__information {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reservation__adults,
+.reservation__children,
+.reservation__date,
+.reservation__time,
+.reservation__visitors__name,
+.reservation__visitors__email,
+.reservation__visitors__phone {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
 }
 
 select {
@@ -24,6 +59,9 @@ select {
   padding: 1rem;
 }
 
+.reservation__button {
+  align-self: center;
+}
 .reservation__btn {
   font-size: 1.5rem;
   font-weight: bold;
