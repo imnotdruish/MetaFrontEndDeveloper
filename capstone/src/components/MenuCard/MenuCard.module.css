@@ -2,6 +2,7 @@
   background-color: #EDEFEE;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 350px;
   height: 100%;
   min-height: 407px;
@@ -14,18 +15,25 @@
   width: 100%;
   max-width: 350px;
   max-height: 166px;
-  object-fit: fill;
+  object-fit: cover;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .name__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding-inline: 1rem;
 }
 
 .card__title {
   font-size: 1.25rem;
+  line-height: 0.75rem;
 }
 
 .card__price {
@@ -54,5 +62,6 @@
 
   .card img {
     max-width: 250px;
+    min-height: 166px;
   }
 }
