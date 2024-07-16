@@ -1,10 +1,13 @@
 import React from 'react'
+import styles from './Order.module.css';
 
 function Order() {
   return (
     <>
-      <section>
-        Order
+      <section className={styles.orders}>
+        <div className={styles.order__container}>
+          Order
+        </div>
       </section>
     </>
   )
