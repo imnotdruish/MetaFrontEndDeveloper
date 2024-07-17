@@ -6,7 +6,9 @@ function Order() {
     <>
       <section className={styles.orders}>
         <div className={styles.order__container}>
-          Order
+          <div className={styles.order__heading}>
+            <h2>Order</h2>
+          </div>
         </div>
       </section>
     </>
