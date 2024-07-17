@@ -9,6 +9,9 @@ function Order() {
           <div className={styles.order__heading}>
             <h2>Order</h2>
           </div>
+          <div className={styles.order__button}>
+            <button className={styles.order__btn}>Go to Checkout</button>
+          </div>
         </div>
       </section>
     </>
