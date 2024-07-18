@@ -1,0 +1,26 @@
+.orders {
+  background-color: #495E57;
+}
+.order__heading {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  padding: 2rem;
+}
+
+.order__button {
+  display: flex;
+  padding: 0 2rem;
+  justify-content: center;
+}
+
+.order__btn {
+  background-color: #F4CE14;
+  font-weight: bold;
+  color: #000000;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 16px;
+  max-width: 150px;
+  margin: 1rem 0;
+}

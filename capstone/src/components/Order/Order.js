@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Order.module.css';
+import Menu from '../Menu/Menu';
 
 function Order() {
   return (
@@ -12,6 +13,7 @@ function Order() {
           <div className={styles.order__button}>
             <button className={styles.order__btn}>Go to Checkout</button>
           </div>
+          <Menu />
         </div>
       </section>
     </>

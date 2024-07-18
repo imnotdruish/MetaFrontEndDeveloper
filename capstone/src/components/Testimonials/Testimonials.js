@@ -6,16 +6,19 @@ const testimonials = [
   {
     rating: 5,
     name: "Justin A.",
+    getImgSrc: () => require('./profile2.jpg'),
     quote: "The place was great, food was great, staff was great. It was just great all around.",
   },
   {
     rating: 4,
     name: "Pedro M.",
+    getImgSrc: () => require('./profile3.jpg'),
     quote: "I had the Bruschetta and it was absolutely amazing. Would have been 5, but did have a longer wait then I was hoping.",
   },
   {
     rating: 5,
     name: "Christine L.",
+    getImgSrc: () => require('./profile1.jpg'),
     quote: "When with the family for the first time yesterday. We have a wonderful time. There was a decent amount of options and were very helpful with accommodating my daughter's allergies",
   }
 ]
@@ -33,6 +36,7 @@ const Testimonials = () => {
               key={testimonial.name}
               rating={testimonial.rating}
               name={testimonial.name}
+              img={testimonial.getImgSrc()}
               quote={testimonial.quote}
             />
           ))}

@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
   max-width: 275px;
   padding: 1rem;
@@ -21,12 +21,12 @@
   gap: 1rem;
 }
 
-.testimonial__card__user__icon {
-  background-color: black;
+.testimonial__card__user img {
+  max-width: 50px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
   border-radius: 100%;
-  padding: .375rem .5rem;
-  font-size: 1.5rem;
-  color: #EDEFEE;
+  border: 2px solid #F4CE14;
 }
 
 .testimonial__card__quote {

@@ -133,6 +133,7 @@ body {
 
   .hero__img img {
     max-width: 500px;
+    box-shadow: 2px 5px 15px black;
   }
 
 }

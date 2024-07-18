@@ -1,5 +1,5 @@
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import Footer from './common/Footer/Footer';
+import Header from './common/Header/Header';
 import Main from './components/Main';
 import About from './components/About/About';
 import Menu from './components/Menu/Menu';
